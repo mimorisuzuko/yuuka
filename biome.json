@@ -1,0 +1,51 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"assists": {
+		"actions": {
+			"source": {
+				"sortJsxProps": "on",
+				"useSortedKeys": "on"
+			}
+		}
+	},
+	"files": {
+		"include": [
+			"packages/yuuka/src/**",
+			"examples/yuuka/src/**"
+		],
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"trailingCommas": "none"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"correctness": {
+				"noUnusedVariables": "error"
+			},
+			"recommended": true,
+			"style": {
+				"noNonNullAssertion": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off"
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": false,
+		"useIgnoreFile": false
+	}
+}
