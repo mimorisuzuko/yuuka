@@ -30,8 +30,6 @@ const createProps = ({
 		props.className = `${yuukaId}`;
 	}
 
-	console.log(emotion);
-
 	return [
 		props,
 		React.createElement(
