@@ -1,10 +1,11 @@
-import { type CSSInterpolation, serializeStyles } from "@emotion/serialize";
+import { serializeStyles } from "@emotion/serialize";
 import React from "react";
 import { compile, middleware, prefixer, serialize, stringify } from "stylis";
+import type { CSS } from "./types";
 
 type Props = {
 	[key: string]: unknown;
-	css?: CSSInterpolation[] | CSSInterpolation;
+	css?: CSS;
 	children?: React.ReactNode;
 	className?: string;
 };
@@ -17,7 +18,7 @@ const createProps = ({
 		return [props, null];
 	}
 
-	const emotion = serializeStyles(Array.isArray(css) ? css : [css]);
+	const emotion = serializeStyles([css]);
 	const yuukaId = `yuuka-${emotion.name}`;
 	const serialized = serialize(
 		compile(`.${yuukaId}{${emotion.styles}}`),

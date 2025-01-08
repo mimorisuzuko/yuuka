@@ -1,5 +1,7 @@
-import type { CSSInterpolation } from "@emotion/serialize";
+import type { CSSObject } from "@emotion/serialize";
 import type React from "react";
+
+export type CSS = CSSObject;
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export declare namespace YuukaJSX {
@@ -15,7 +17,7 @@ export declare namespace YuukaJSX {
 		React.JSX.IntrinsicClassAttributes<T>;
 	export type IntrinsicElements = {
 		[K in keyof React.JSX.IntrinsicElements]: React.JSX.IntrinsicElements[K] & {
-			css?: CSSInterpolation[] | CSSInterpolation;
+			css?: CSS;
 		};
 	};
 }
