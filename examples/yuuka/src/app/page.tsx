@@ -1,4 +1,4 @@
-import { type CSS, css } from "@mimorisuzuko/yuuka";
+import { type CSS, Global, css } from "@mimorisuzuko/yuuka";
 import Link from "next/link";
 
 const style: CSS = { color: "red" };
@@ -13,6 +13,7 @@ export default function Home() {
 			<Link className={className} href="/">
 				next/link
 			</Link>
+			<Global>{{ main: { background: "green" } }}</Global>
 		</main>
 	);
 }
