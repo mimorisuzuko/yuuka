@@ -1,6 +1,15 @@
 {
     "name": "@mimorisuzuko/yuuka",
     "description": "A CSS-in-JS that works in server and client Components implemented with `@emotion/serialize` and `stylis`.",
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/mimorisuzuko/yuuka.git"
+	},
+    "author": {
+        "email": "m@mimorisuzu.co",
+        "name": "Hiroki Usuba",
+        "url": "https://mimorisuzu.co"
+    },
     "scripts": {
         "tsc": "npx tsc"
     },
@@ -21,5 +30,8 @@
     "files": [
         "dist"
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^19.0.0"
+    }
 }
