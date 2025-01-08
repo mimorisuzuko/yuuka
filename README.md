@@ -4,7 +4,7 @@ A CSS-in-JS that works in server and client Components implemented with `@emotio
 
 ## APIs
 
-Can write [any emotion object-styles](https://emotion.sh/docs/object-styles).
+Can write [any emotion object-styles](https://emotion.sh/docs/object-styles) in the following APIs.
 
 ### `css` function
 
