@@ -1,14 +1,7 @@
 import { serializeStyles } from "@emotion/serialize";
 import React from "react";
 import { compile, middleware, prefixer, serialize, stringify } from "stylis";
-import type { CSS } from "./types";
-
-type Props = {
-	[key: string]: unknown;
-	css?: CSS;
-	children?: React.ReactNode;
-	className?: string;
-};
+import type { Props } from "./types";
 
 const createProps = ({
 	css,
@@ -37,7 +30,7 @@ const createProps = ({
 			"style",
 			{
 				href: yuukaId,
-				key: "yuuka",
+				key: "yuuka-style",
 				precedence: "medium"
 			},
 			serialized

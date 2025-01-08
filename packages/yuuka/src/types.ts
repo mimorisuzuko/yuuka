@@ -3,6 +3,13 @@ import type React from "react";
 
 export type CSS = CSSObject;
 
+export type Props = {
+	[key: string]: unknown;
+	css?: CSS;
+	children?: React.ReactNode;
+	className?: string;
+};
+
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export declare namespace YuukaJSX {
 	export type Element = React.JSX.Element;
