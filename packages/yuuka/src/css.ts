@@ -8,8 +8,9 @@ export const css = (
 ): [className: string, styleElement: React.ReactElement] => {
 	const emotion = serializeStyles([css]);
 	const className = `yuuka-${emotion.name}`;
+	const replaced = emotion.styles.replaceAll("{:", "{&:");
 	const serialized = serialize(
-		compile(`.${className}{${emotion.styles}}`),
+		compile(`.${className}{${replaced}}`),
 		middleware([prefixer, stringify])
 	);
 
