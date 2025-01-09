@@ -4,6 +4,8 @@ import createProps from "./createProps";
 
 export type { YuukaJSX as JSX } from "./types";
 
+export const Fragment = ReactJSXRuntime.Fragment;
+
 export function jsx(
 	type: React.ElementType,
 	_props: Record<string, any>,

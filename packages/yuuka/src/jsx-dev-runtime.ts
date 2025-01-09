@@ -3,6 +3,8 @@ import ReactJSXRuntimeDev from "react/jsx-dev-runtime";
 import createProps from "./createProps";
 import type { Props } from "./types";
 
+export const Fragment = ReactJSXRuntimeDev.Fragment;
+
 export function jsxDEV(
 	type: React.ElementType,
 	_props: Props,
