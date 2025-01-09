@@ -4,7 +4,7 @@
   "description": "A CSS-in-JS that works in server and client Components implemented with `@emotion/serialize` and `stylis`.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mimorisuzuko/yuuka.git"
+    "url": "git+https://github.com/mimorisuzuko/yuuka.git"
   },
   "author": {
     "email": "m@mimorisuzu.co",
