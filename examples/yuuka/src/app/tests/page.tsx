@@ -1,16 +1,30 @@
-export default function Page() {
+import type { ReactNode } from "react";
+
+type Props = { children: ReactNode };
+
+function Main({ children }: Props) {
 	return (
 		<main
 			css={{
-				input: {
-					":focus": {
-						background: "red"
-					}
+				":focus-within": {
+					background: "red"
 				}
 			}}
 		>
-			<input defaultValue="" type="text" />
-			<input defaultValue="" type="text" />
+			{children}
+			<>
+				<input defaultValue="" type="text" />
+				<input defaultValue="" type="text" />
+			</>
 		</main>
+	);
+}
+
+export default function Page() {
+	return (
+		<Main>
+			<input defaultValue="" type="text" />
+			<input defaultValue="" type="text" />
+		</Main>
 	);
 }

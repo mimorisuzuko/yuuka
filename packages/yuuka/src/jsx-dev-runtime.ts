@@ -1,7 +1,7 @@
 import React from "react";
 import ReactJSXRuntimeDev from "react/jsx-dev-runtime";
-import createProps from "./createProps";
 import type { Props } from "./types";
+import createProps from "./utils/createProps";
 
 export const Fragment = ReactJSXRuntimeDev.Fragment;
 
@@ -33,7 +33,7 @@ export function jsxDEV(
 				ReactJSXRuntimeDev.jsxDEV(
 					type,
 					props,
-					key,
+					key ?? "yuuka-element",
 					isStaticChildren,
 					source,
 					self

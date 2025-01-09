@@ -1,6 +1,6 @@
 import type React from "react";
-import { css } from "./css";
-import type { Props } from "./types";
+import { css } from "../css";
+import type { Props } from "../types";
 
 const createProps = ({
 	css: _css,
