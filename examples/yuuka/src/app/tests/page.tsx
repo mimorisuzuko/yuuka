@@ -10,6 +10,7 @@ export default function Page() {
 			}}
 		>
 			<input defaultValue="" type="text" />
+			<input defaultValue="" type="text" />
 		</main>
 	);
 }

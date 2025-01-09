@@ -3,8 +3,6 @@ import ReactJSXRuntimeDev from "react/jsx-dev-runtime";
 import createProps from "./createProps";
 import type { Props } from "./types";
 
-export const Fragment = ReactJSXRuntimeDev.Fragment;
-
 export function jsxDEV(
 	type: React.ElementType,
 	_props: Props,
@@ -26,14 +24,20 @@ export function jsxDEV(
 		);
 	}
 
-	if (props.key === undefined) {
-		props.key = "yuuka-element";
-	}
-
 	return ReactJSXRuntimeDev.jsxDEV(
 		React.Fragment,
 		{
-			children: [React.createElement(type, props), Style]
+			children: [
+				ReactJSXRuntimeDev.jsxDEV(
+					type,
+					props,
+					key,
+					isStaticChildren,
+					source,
+					self
+				),
+				Style
+			]
 		},
 		key,
 		isStaticChildren,

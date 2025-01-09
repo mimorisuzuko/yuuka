@@ -4,8 +4,6 @@ import createProps from "./createProps";
 
 export type { YuukaJSX as JSX } from "./types";
 
-// export const Fragment = ReactJSXRuntime.Fragment;
-
 export function jsx(
 	type: React.ElementType,
 	_props: Record<string, any>,
@@ -17,14 +15,10 @@ export function jsx(
 		return ReactJSXRuntime.jsx(type, props, key);
 	}
 
-	if (props.key === undefined) {
-		props.key = "yuuka-element";
-	}
-
 	return ReactJSXRuntime.jsx(
 		React.Fragment,
 		{
-			children: [React.createElement(type, props), Style]
+			children: [ReactJSXRuntime.jsx(type, props, key), Style]
 		},
 		key
 	);
@@ -38,17 +32,13 @@ export function jsxs(
 	const [props, Style] = createProps(_props);
 
 	if (Style === null) {
-		return ReactJSXRuntime.jsx(type, props, key);
-	}
-
-	if (props.key === undefined) {
-		props.key = "yuuka-element";
+		return ReactJSXRuntime.jsxs(type, props, key);
 	}
 
 	return ReactJSXRuntime.jsxs(
 		React.Fragment,
 		{
-			children: [React.createElement(type, props), Style]
+			children: [ReactJSXRuntime.jsx(type, props, key), Style]
 		},
 		key
 	);
