@@ -9,6 +9,7 @@
 		}
 	},
 	"files": {
+		"ignore": ["packages/yuuka/src/utils/prefixer.ts"],
 		"ignoreUnknown": false,
 		"include": ["**/*.ts", "**/*.tsx", "**/*.mts"]
 	},
