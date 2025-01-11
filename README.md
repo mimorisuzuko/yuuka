@@ -1,6 +1,12 @@
-# WIP: yuuka
+# yuuka
 
 A CSS-in-JS that works in server and client Components implemented with `@emotion/serialize` and `stylis`. This package name is inspired by [Yuuka Hayase](https://www.youtube.com/watch?v=a_stK_fFXQI).
+
+## Install
+
+```sh
+yarn add @mimorisuzuko/yuuka@latest
+```
 
 ## APIs
 
