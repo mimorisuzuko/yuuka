@@ -1,8 +1,8 @@
 import { serializeStyles } from "@emotion/serialize";
 import React from "react";
-import { compile, middleware, serialize, stringify } from "stylis";
+import { compile, middleware, prefixer, serialize, stringify } from "stylis";
 import type { CSS } from "./types";
-import { prefixer } from "./utils/prefixer";
+import { compat } from "./utils/compat";
 
 export const keyframes = (
 	css: CSS
@@ -11,7 +11,7 @@ export const keyframes = (
 	const animation = `yuuka-animation-${emotion.name}`;
 	const serialized = serialize(
 		compile(`@keyframes ${animation}{${emotion.styles}}`),
-		middleware([prefixer, stringify])
+		middleware([prefixer, compat, stringify])
 	);
 
 	return [
