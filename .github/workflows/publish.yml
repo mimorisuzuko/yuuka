@@ -10,10 +10,6 @@ defaults:
   run:
     working-directory: packages/yuuka
 
-permissions:
-    packages: write
-    contents: read
-
 jobs:
   publish:
     runs-on: ubuntu-latest
