@@ -9,11 +9,8 @@
 		}
 	},
 	"files": {
-		"include": [
-			"packages/yuuka/src/**",
-			"examples/yuuka/src/**"
-		],
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"include": ["**/*.ts", "**/*.tsx", "**/*.mts"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -45,7 +42,7 @@
 	},
 	"vcs": {
 		"clientKind": "git",
-		"enabled": false,
-		"useIgnoreFile": false
+		"enabled": true,
+		"useIgnoreFile": true
 	}
 }
