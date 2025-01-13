@@ -1,5 +1,6 @@
 import React from "react";
 import type { CSS } from "./types";
+import { PRECEDENCE, STYLE_KEY } from "./utils/constants";
 import { createStyle } from "./utils/createStyle";
 
 export const css = (
@@ -13,8 +14,8 @@ export const css = (
 			"style",
 			{
 				href: className,
-				key: "yuuka-style",
-				precedence: "medium"
+				key: STYLE_KEY,
+				precedence: PRECEDENCE
 			},
 			style
 		)

@@ -3,6 +3,7 @@ import React from "react";
 import { compile, middleware, prefixer, serialize, stringify } from "stylis";
 import type { CSS } from "./types";
 import { compat } from "./utils/compat";
+import { PRECEDENCE, STYLE_KEY } from "./utils/constants";
 
 export const keyframes = (
 	css: CSS
@@ -20,8 +21,8 @@ export const keyframes = (
 			"style",
 			{
 				href: animation,
-				key: "yuuka-animation",
-				precedence: "medium"
+				key: STYLE_KEY,
+				precedence: PRECEDENCE
 			},
 			serialized
 		)
