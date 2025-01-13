@@ -8,6 +8,16 @@ A CSS-in-JS that works in server and client Components implemented with `@emotio
 yarn add @mimorisuzuko/yuuka@latest
 ```
 
+Add `jsxImportSource` in `tsconfig.json` as follows.
+
+```json
+{
+	"compilerOptions": {
+		"jsxImportSource": "@mimorisuzuko/yuuka",
+	}
+}
+```
+
 ## APIs
 
 Can write [any emotion object-styles](https://emotion.sh/docs/object-styles) in the following APIs.
