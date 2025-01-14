@@ -13,6 +13,7 @@
   },
   "scripts": {
     "tsc": "npx tsc",
+    "dev": "yarn tsc --watch",
     "test": "vitest",
     "test:run": "vitest run"
   },
