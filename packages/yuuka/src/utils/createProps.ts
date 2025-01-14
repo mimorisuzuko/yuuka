@@ -1,11 +1,11 @@
-import type React from "react";
+import type { FC } from "react";
 import { css } from "../css";
 import type { Props } from "../types";
 
 const createProps = ({
 	css: _css,
 	...props
-}: Props): [props: Props, Style: React.ReactElement | null] => {
+}: Props): [props: Props, Style: FC | null] => {
 	if (_css === undefined) {
 		return [props, null];
 	}

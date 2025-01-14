@@ -1,6 +1,6 @@
 import { keyframes } from "@mimorisuzuko/yuuka";
 
-const [animationName, animationStyleElement] = keyframes({
+const [animationName, Style] = keyframes({
 	from: {
 		transform: "rotate(0)"
 	},
@@ -20,7 +20,7 @@ export default function Page() {
 				border: "1px solid black"
 			}}
 		>
-			{animationStyleElement}
+			<Style />
 			<div
 				css={{
 					animation: `1.5s linear infinite ${animationName}`,

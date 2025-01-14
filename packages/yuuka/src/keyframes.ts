@@ -1,13 +1,11 @@
 import { serializeStyles } from "@emotion/serialize";
-import React from "react";
+import { type FC, createElement } from "react";
 import { compile, middleware, prefixer, serialize, stringify } from "stylis";
 import type { CSS } from "./types";
 import { compat } from "./utils/compat";
-import { PRECEDENCE, STYLE_KEY } from "./utils/constants";
+import { PRECEDENCE } from "./utils/constants";
 
-export const keyframes = (
-	css: CSS
-): [animationName: string, styleElement: React.ReactElement] => {
+export const keyframes = (css: CSS): [animationName: string, Style: FC] => {
 	const emotion = serializeStyles([css]);
 	const animation = `yuuka-animation-${emotion.name}`;
 	const serialized = serialize(
@@ -17,14 +15,15 @@ export const keyframes = (
 
 	return [
 		animation,
-		React.createElement(
-			"style",
-			{
-				href: animation,
-				key: STYLE_KEY,
-				precedence: PRECEDENCE
-			},
-			serialized
-		)
+		function Style() {
+			return createElement(
+				"style",
+				{
+					href: animation,
+					precedence: PRECEDENCE
+				},
+				serialized
+			);
+		}
 	];
 };

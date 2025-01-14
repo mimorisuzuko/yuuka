@@ -1,23 +1,22 @@
-import React from "react";
+import { type FC, createElement } from "react";
 import type { CSS } from "./types";
-import { PRECEDENCE, STYLE_KEY } from "./utils/constants";
+import { PRECEDENCE } from "./utils/constants";
 import { createStyle } from "./utils/createStyle";
 
-export const css = (
-	css: CSS
-): [className: string, styleElement: React.ReactElement] => {
+export const css = (css: CSS): [className: string, Style: FC] => {
 	const [className, style] = createStyle(css);
 
 	return [
 		className,
-		React.createElement(
-			"style",
-			{
-				href: className,
-				key: STYLE_KEY,
-				precedence: PRECEDENCE
-			},
-			style
-		)
+		function Style() {
+			return createElement(
+				"style",
+				{
+					href: className,
+					precedence: PRECEDENCE
+				},
+				style
+			);
+		}
 	];
 };

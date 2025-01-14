@@ -1,7 +1,7 @@
 import React from "react";
 import ReactJSXRuntimeDev from "react/jsx-dev-runtime";
 import type { Props } from "./types";
-import { ELEMENT_KEY } from "./utils/constants";
+import { ELEMENT_KEY, STYLE_KEY } from "./utils/constants";
 import createProps from "./utils/createProps";
 
 export const Fragment = ReactJSXRuntimeDev.Fragment;
@@ -39,7 +39,14 @@ export function jsxDEV(
 					source,
 					self
 				),
-				Style
+				ReactJSXRuntimeDev.jsxDEV(
+					Style,
+					{},
+					STYLE_KEY,
+					isStaticChildren,
+					source,
+					self
+				)
 			]
 		},
 		key,
