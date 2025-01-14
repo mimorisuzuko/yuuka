@@ -39,18 +39,11 @@ export function jsxDEV(
 					source,
 					self
 				),
-				ReactJSXRuntimeDev.jsxDEV(
-					Style,
-					{},
-					STYLE_KEY,
-					isStaticChildren,
-					source,
-					self
-				)
+				ReactJSXRuntimeDev.jsxDEV(Style, {}, STYLE_KEY, true, source, self)
 			]
 		},
 		key,
-		isStaticChildren,
+		true,
 		source,
 		self
 	);
