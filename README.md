@@ -1,4 +1,4 @@
-# yuuka
+# [yuuka](https://www.npmjs.com/package/@mimorisuzuko/yuuka)
 
 A CSS-in-JS that works in server and client Components implemented with `@emotion/serialize` and `stylis`. This package name is inspired by [Yuuka Hayase](https://www.youtube.com/watch?v=a_stK_fFXQI).
 
